@@ -3,11 +3,30 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 html,
 body{
-  font-family: 'Courier New', Courier, monospace;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width: 100%;
 }
 .head{
-  background-color: rgb(126, 195, 255);
+  background-color: rgb(32, 115, 187);
+  height: 50px;
+  text-align: center;
+
+}
+
+a{
+  color: rgb(255, 255, 255);
+}
+h1,h2,h3{
+  color: rgb(19, 27, 35);
+}
+.image-container { /* New class for centering images */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img{
+  height:200px;
 }
