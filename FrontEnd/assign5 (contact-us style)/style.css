@@ -43,6 +43,10 @@ p{
   padding-top: 1rem;
 }
 input{
+  color: black;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-left: 0.5rem;
   width: 27rem;
   height: 2.5rem;
   border: 1px solid rgba(0, 0, 0, 0.355);
@@ -50,6 +54,7 @@ input{
   background-color: rgb(255, 255, 255);
 }
 textarea{
+  padding-left: 0.5rem;
   width: 27rem;
   height: 4rem;
   border: 1px solid rgba(0, 0, 0, 0.355);
