@@ -45,6 +45,3 @@
 // for(let char of str){
 //   console.log(char+char);
 // }
-
-
-var arr = [3, 1, 4, 3, 1, 4, 2, 5] 
