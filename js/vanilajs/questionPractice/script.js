@@ -11,7 +11,7 @@
 
 // arr.forEach(function(val){
 //   obj[val] === undefined ? (obj[val] = 1) : obj[val]++;
-// });
+// }); .
 
 
 
@@ -77,6 +77,34 @@
 
 // newfn();
 // newfn();
+
+// function throt(fn, delay){
+//   let lastCall = 0;
+//   return function(){
+//     let current = Date.now();
+//     if(current - lastCall >= delay){
+//       lastCall = current;
+//       fn();
+//     }
+//   }
+// }
+
+// var newfn = throt(function(){
+//   console.log('This will run in 2 seconds')
+// },2000)
+
+// newfn();|
+
+
+
+// function sum(a, b) {
+//   prompt(a);
+//   prompt(b);
+//   let sum = a+b;
+//   return sum;
+// }
+
+// module.exports = {sum}
 
 
 
