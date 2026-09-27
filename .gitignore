@@ -1,0 +1,45 @@
+# Dependencies
+/node_modules*/
+node_modules/
+
+# Build output and caches
+dist/
+build/
+coverage/
+.next/
+out/
+.turbo/
+.cache/
+.parcel-cache/
+.vite/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment and API credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.local
+
+# Deployment state
+.vercel/
+.netlify/
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
