@@ -1,15 +1,997 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aman Gupta — MERN Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Aman Gupta, MERN stack developer in Lucknow, India. Building scalable web apps, secure APIs, and automation systems." />
+    <meta name="author" content="Aman Gupta" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aman Gupta — MERN Stack Developer" />
+    <meta property="og:description"
+        content="Portfolio of Aman Gupta, MERN stack developer in Lucknow, India. Building scalable web apps, secure APIs, and automation systems." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aman Gupta — MERN Stack Developer" />
+    <meta name="twitter:description"
+        content="Portfolio of Aman Gupta, MERN stack developer in Lucknow, India. Building scalable web apps, secure APIs, and automation systems." />
+    <link rel="canonical" href="/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        card: 'hsl(var(--card))',
+                        popover: 'hsl(var(--popover))',
+                        primary: 'hsl(var(--primary))',
+                        'primary-foreground': 'hsl(var(--primary-foreground))',
+                        secondary: 'hsl(var(--secondary))',
+                        muted: 'hsl(var(--muted))',
+                        'muted-foreground': 'hsl(var(--muted-foreground))',
+                        accent: 'hsl(var(--accent))',
+                        'accent-foreground': 'hsl(var(--accent-foreground))',
+                        destructive: 'hsl(var(--destructive))',
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        ink: 'hsl(var(--ink))',
+                        paper: 'hsl(var(--paper))',
+                        'paper-warm': 'hsl(var(--paper-warm))',
+                        lime: 'hsl(var(--lime))',
+                        'lime-glow': 'hsl(var(--lime-glow))',
+                        rust: 'hsl(var(--rust))'
+                    },
+                    backgroundImage: {
+                        'gradient-spotlight': 'var(--gradient-spotlight)',
+                        'gradient-noise': 'var(--gradient-noise)'
+                    },
+                    boxShadow: {
+                        brutal: 'var(--shadow-brutal)',
+                        soft: 'var(--shadow-soft)'
+                    },
+                    container: {
+                        center: true,
+                        padding: '1.5rem',
+                        screens: {
+                            '2xl': '1400px'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        :root {
+            --background: 40 14% 96%;
+            --foreground: 24 10% 10%;
+            --card: 40 14% 96%;
+            --popover: 40 14% 96%;
+            --primary: 24 10% 10%;
+            --primary-foreground: 40 14% 96%;
+            --secondary: 40 10% 90%;
+            --muted: 40 8% 88%;
+            --muted-foreground: 24 6% 40%;
+            --accent: 72 95% 55%;
+            --accent-foreground: 24 10% 10%;
+            --destructive: 0 70% 50%;
+            --border: 24 8% 82%;
+            --input: 24 8% 82%;
+            --ring: 24 10% 10%;
+            --radius: 0.25rem;
+            --ink: 24 12% 8%;
+            --paper: 40 18% 97%;
+            --paper-warm: 38 22% 93%;
+            --lime: 72 95% 55%;
+            --lime-glow: 72 95% 65%;
+            --rust: 14 75% 52%;
+            --gradient-spotlight: radial-gradient(ellipse at top, hsl(var(--lime) / 0.18), transparent 60%);
+            --gradient-noise: linear-gradient(135deg, hsl(var(--paper-warm)) 0%, hsl(var(--paper)) 100%);
+            --shadow-brutal: 6px 6px 0 0 hsl(var(--ink));
+            --shadow-soft: 0 30px 60px -30px hsl(var(--ink) / 0.4);
+            --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        background: hsl(var(--background));
+        color: hsl(var(--foreground));
+        background-image: radial-gradient(hsl(var(--ink) / 0.04) 1px, transparent 1px);
+        background-size: 24px 24px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      ::selection {
+        background: hsl(var(--accent));
+        color: hsl(var(--ink));
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .font-display {
+        font-family: "Space Grotesk", sans-serif;
+        letter-spacing: -0.04em;
+      }
+
+      .font-serif-display {
+        font-family: "Instrument Serif", serif;
+        letter-spacing: -0.02em;
+      }
+
+      .font-mono {
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      .text-balance {
+        text-wrap: balance;
+      }
+
+      .grain {
+        position: relative;
+      }
+
+      .grain::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0.4'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        opacity: 0.4;
+        mix-blend-mode: multiply;
+      }
+
+      .marquee-track {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        animation: marquee 40s linear infinite;
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .blink {
+        animation: blink 1s step-end infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .container {
+        width: min(100%, 1400px);
+        margin: 0 auto;
+        padding-inline: 1.5rem;
+      }
+
+      .accent-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: hsl(var(--accent));
+        box-shadow: 0 0 0 4px hsl(var(--accent) / 0.18);
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(0.9);
+        }
+      }
+
+      .nav-link {
+        transition: color 300ms ease;
+      }
+
+      .nav-link:hover,
+      .nav-link:focus-visible {
+        color: hsl(var(--accent));
+      }
+
+      .hero-spotlight {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: var(--gradient-spotlight);
+      }
+
+      .headline-word {
+        position: relative;
+        display: inline-block;
+      }
+
+      .headline-word.intent::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0.12em;
+        height: 0.28em;
+        background: hsl(var(--accent));
+        z-index: -1;
+      }
+
+      .hero-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid hsl(var(--foreground));
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 50%;
+        height: 1px;
+        background: hsl(var(--foreground));
+        transition: width 300ms ease;
+      }
+
+      .hero-link:hover::after,
+      .hero-link:focus-visible::after {
+        width: 100%;
+      }
+
+      .work-row,
+      .contact-row,
+      .repo-card,
+      .stat-card,
+      .stack-card {
+        transition: transform 300ms ease, background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+      }
+
+      .work-row:hover,
+      .repo-card:hover,
+      .contact-row:hover {
+        background: hsl(var(--foreground));
+        color: hsl(var(--background));
+      }
+
+      .work-row:hover .stack-pill,
+      .work-row:hover .work-icon,
+      .repo-card:hover .repo-icon,
+      .contact-row:hover .contact-arrow {
+        border-color: hsl(var(--background));
+        color: hsl(var(--background));
+      }
+
+      .work-row:hover .stack-pill {
+        border-color: hsl(var(--background));
+      }
+
+      .work-icon,
+      .repo-icon,
+      .contact-arrow {
+        transition: transform 500ms ease, border-color 300ms ease, color 300ms ease;
+      }
+
+      .work-row:hover .work-icon,
+      .repo-card:hover .repo-icon,
+      .contact-row:hover .contact-arrow {
+        transform: rotate(45deg);
+      }
+
+      .contact-row:hover .contact-arrow {
+        transform: translateX(4px) rotate(45deg);
+      }
+
+      .repo-card {
+        position: relative;
+      }
+
+      .repo-card:hover {
+        transform: translateY(-2px);
+      }
+
+      .repo-card:hover .repo-name {
+        color: hsl(var(--background));
+      }
+
+      .cta-button,
+      .out-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0.9rem 1.4rem;
+        border: 1px solid hsl(var(--foreground));
+        background: transparent;
+        color: hsl(var(--foreground));
+        font-family: "JetBrains Mono", monospace;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, transform 300ms ease;
+      }
+
+      .cta-button:hover,
+      .cta-button:focus-visible,
+      .out-button:hover,
+      .out-button:focus-visible {
+        background: hsl(var(--accent));
+        color: hsl(var(--ink));
+        border-color: hsl(var(--accent));
+        transform: translateY(-1px);
+      }
+
+      .header-label,
+      .section-label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: hsl(var(--muted-foreground));
+      }
+
+      .contact-footer {
+        border-top: 1px solid hsl(var(--border));
+        opacity: 0.8;
+      }
+
+      @media (max-width: 767px) {
+        .container {
+          padding-inline: 1.25rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
 </head>
+
 <body>
-  <main class="w-full px-[10rem] py-8 font-['Helvetica_Now_Display']">
-    <nav class=""></nav>
-  </main>
+    <main class="relative bg-background text-foreground">
+        <nav class="fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/70 backdrop-blur-md">
+            <div class="container flex items-center justify-between py-5">
+                <a href="#top" class="font-display text-xl font-bold tracking-[-0.08em] text-foreground">
+                    AG<span class="text-accent">.</span>
+                </a>
+    
+                <div class="hidden items-center gap-8 md:flex">
+                    <a href="#work" class="nav-link font-mono text-[11px] uppercase tracking-[0.24em]">Work</a>
+                    <a href="#about" class="nav-link font-mono text-[11px] uppercase tracking-[0.24em]">About</a>
+                    <a href="#stack" class="nav-link font-mono text-[11px] uppercase tracking-[0.24em]">Stack</a>
+                    <a href="#github" class="nav-link font-mono text-[11px] uppercase tracking-[0.24em]">GitHub</a>
+                    <a href="#contact" class="nav-link font-mono text-[11px] uppercase tracking-[0.24em]">Contact</a>
+                </div>
+    
+                <a href="mailto:xamnxd@gmail.com"
+                    class="inline-flex items-center justify-center border border-foreground px-4 py-2 font-mono text-[10px] uppercase tracking-[0.18em] transition-colors duration-300 hover:bg-foreground hover:text-background">
+                    Let&apos;s talk
+                </a>
+            </div>
+        </nav>
+    
+        <section id="top" class="relative min-h-screen px-6 pb-20 pt-32 md:px-12">
+            <div class="hero-spotlight"></div>
+            <div class="container relative">
+                <div class="mb-12 grid gap-4 text-[11px] uppercase tracking-[0.18em] text-foreground/70 md:grid-cols-4">
+                    <div class="flex items-center gap-3"><span class="font-mono">Location</span><span
+                            class="ml-auto">Lucknow, IN</span></div>
+                    <div class="flex items-center gap-3"><span class="font-mono">Role</span><span class="ml-auto">MERN
+                            Developer</span></div>
+                    <div class="flex items-center gap-3"><span class="font-mono">Status</span><span
+                            class="ml-auto flex items-center gap-2"><span class="accent-dot"></span>Available</span></div>
+                    <div class="flex items-center gap-3"><span class="font-mono">Year</span><span
+                            class="ml-auto">2026</span></div>
+                </div>
+    
+                <div class="mb-8 font-mono text-[11px] uppercase tracking-[0.28em] text-muted-foreground">[ portfolio — Aman
+                    Gupta ]</div>
+    
+                <h1 class="font-display text-[14vw] font-medium leading-[0.9] tracking-[-0.08em] md:text-[10vw]">
+                    <span class="block">Building</span>
+                    <span class="block"><em class="font-serif-display text-rust not-italic">scalable</em> systems</span>
+                    <span class="block">with <span class="headline-word intent relative inline-block">intent.</span></span>
+                </h1>
+    
+                <div class="mt-16 grid gap-10 md:grid-cols-12 md:items-end">
+                    <div class="md:col-span-3">
+                        <a href="#work"
+                            class="hero-link font-mono text-[11px] uppercase tracking-[0.24em] transition-all duration-300 hover:w-full">
+                            <span>Scroll to work</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                                class="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                                <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+    
+                    <div class="md:col-span-7 md:col-start-7">
+                        <p class="max-w-2xl text-lg text-foreground/80 md:text-xl">
+                            I&apos;m a MERN stack developer crafting REST APIs, secure auth flows, and automation pipelines
+                            that quietly power the products you use.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="border-y border-border bg-foreground py-6 text-background" aria-label="Technology marquee">
+            <div class="overflow-hidden whitespace-nowrap">
+                <div class="marquee-track px-8 text-3xl md:text-5xl">
+                    <span class="font-display font-medium">MongoDB</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">Express</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">React</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">Node.js</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">TypeScript</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">Tailwind</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">Docker</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">AWS</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">WebSockets</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">REST APIs</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">MongoDB</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">Express</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">React</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">Node.js</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">TypeScript</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">Tailwind</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">Docker</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">AWS</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">WebSockets</span>
+                    <span class="mx-4 text-[0.9em] text-accent">✦</span>
+                    <span class="font-display font-medium">REST APIs</span>
+                </div>
+            </div>
+        </section>
+    
+        <section id="work" class="container py-24 md:py-32">
+            <div class="grid gap-8 md:grid-cols-12 md:items-start">
+                <div class="section-label md:col-span-3">01 — Selected Work</div>
+                <div class="md:col-span-9">
+                    <h2 class="font-display text-5xl font-medium leading-[0.95] md:text-7xl">
+                        Projects I shipped between <em class="font-serif-display text-rust not-italic">curiosity</em> and
+                        deadlines.
+                    </h2>
+                </div>
+            </div>
+    
+            <div class="mt-14 border-t border-foreground">
+                <a href="https://github.com/amnxd/vartalap" target="_blank" rel="noopener noreferrer"
+                    class="work-row block border-b border-foreground px-0 py-8 transition-colors duration-300 hover:bg-foreground hover:text-background md:py-10">
+                    <div class="grid items-center gap-6 md:grid-cols-12">
+                        <div class="font-mono text-sm md:col-span-1">01</div>
+                        <div class="md:col-span-3">
+                            <div class="font-display text-3xl md:text-4xl">Vartalap</div>
+                            <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-accent">Decentralized
+                                Chat</div>
+                        </div>
+                        <div class="text-base leading-relaxed text-foreground/80 md:col-span-5 md:text-lg">End-to-end
+                            encrypted messaging built on WebSockets with a peer-to-peer architecture for true private
+                            communication.</div>
+                        <div class="flex flex-wrap gap-2 md:col-span-2">
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">WebSockets</span>
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">Node.js</span>
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">Crypto</span>
+                        </div>
+                        <div class="md:col-span-1 md:justify-self-end">
+                            <svg class="work-icon h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="https://github.com/amnxd/n8n-entropy-mesh" target="_blank" rel="noopener noreferrer"
+                    class="work-row block border-b border-foreground px-0 py-8 transition-colors duration-300 hover:bg-foreground hover:text-background md:py-10">
+                    <div class="grid items-center gap-6 md:grid-cols-12">
+                        <div class="font-mono text-sm md:col-span-1">02</div>
+                        <div class="md:col-span-3">
+                            <div class="font-display text-3xl md:text-4xl">Entropy Mesh</div>
+                            <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-accent">WhatsApp
+                                Automation</div>
+                        </div>
+                        <div class="text-base leading-relaxed text-foreground/80 md:col-span-5 md:text-lg">Webhook-based
+                            automation workflows on n8n, removing repetitive manual ops and orchestrating customer
+                            touchpoints.</div>
+                        <div class="flex flex-wrap gap-2 md:col-span-2">
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">n8n</span>
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">Webhooks</span>
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">Node.js</span>
+                        </div>
+                        <div class="md:col-span-1 md:justify-self-end">
+                            <svg class="work-icon h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="https://github.com/amnxd/manan" target="_blank" rel="noopener noreferrer"
+                    class="work-row block border-b border-foreground px-0 py-8 transition-colors duration-300 hover:bg-foreground hover:text-background md:py-10">
+                    <div class="grid items-center gap-6 md:grid-cols-12">
+                        <div class="font-mono text-sm md:col-span-1">03</div>
+                        <div class="md:col-span-3">
+                            <div class="font-display text-3xl md:text-4xl">Manan</div>
+                            <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-accent">Academic
+                                Assistant</div>
+                        </div>
+                        <div class="text-base leading-relaxed text-foreground/80 md:col-span-5 md:text-lg">Smart
+                            productivity tooling for students — focused features that make academic work feel less like
+                            work.</div>
+                        <div class="flex flex-wrap gap-2 md:col-span-2">
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">React</span>
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">Express</span>
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">MongoDB</span>
+                        </div>
+                        <div class="md:col-span-1 md:justify-self-end">
+                            <svg class="work-icon h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+    
+                <a href="https://github.com/amnxd/SecureStash" target="_blank" rel="noopener noreferrer"
+                    class="work-row block border-b border-foreground px-0 py-8 transition-colors duration-300 hover:bg-foreground hover:text-background md:py-10">
+                    <div class="grid items-center gap-6 md:grid-cols-12">
+                        <div class="font-mono text-sm md:col-span-1">04</div>
+                        <div class="md:col-span-3">
+                            <div class="font-display text-3xl md:text-4xl">Secure Stash</div>
+                            <div class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-accent">Encrypted Storage
+                            </div>
+                        </div>
+                        <div class="text-base leading-relaxed text-foreground/80 md:col-span-5 md:text-lg">Secure data
+                            storage with hardened authentication and encrypted persistence — secrets stay secret.</div>
+                        <div class="flex flex-wrap gap-2 md:col-span-2">
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">JWT</span>
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">Encryption</span>
+                            <span
+                                class="stack-pill border border-current px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] opacity-80">MongoDB</span>
+                        </div>
+                        <div class="md:col-span-1 md:justify-self-end">
+                            <svg class="work-icon h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    
+        <section id="about" class="bg-paper-warm py-24 md:py-32">
+            <div class="container grid gap-10 md:grid-cols-12">
+                <div class="md:col-span-5 md:sticky md:top-32 md:self-start">
+                    <div class="section-label">02 — About</div>
+                    <h2 class="mt-6 font-display text-4xl font-medium leading-[1] md:text-6xl">
+                        A developer who treats <em class="font-serif-display text-rust not-italic">backend</em> as a craft.
+                    </h2>
+                    <p class="mt-6 max-w-xl text-lg leading-relaxed text-foreground/80">
+                        Currently studying CS at BBD University (GPA 8.68) while shipping production code. I care about
+                        secure system design, clean architecture, and APIs that are a pleasure to consume.
+                    </p>
+                    <div class="mt-8 inline-flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.2em]">
+                        <span>—</span>
+                        <span>B.Tech CSE</span>
+                        <span>—</span>
+                        <span>2023 / 2027</span>
+                    </div>
+                </div>
+    
+                <div class="md:col-span-7">
+                    <div class="section-label mb-8">Experience</div>
+                    <div class="border-l-2 border-foreground pl-6 md:pl-8">
+                        <div class="relative mb-12 pl-6 md:pl-8">
+                            <div
+                                class="absolute -left-[2.38rem] top-2 h-4 w-4 rounded-full border-2 border-foreground bg-accent">
+                            </div>
+                            <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                                <h3 class="font-display text-3xl">Backend Developer <span class="text-rust">@ Medsta</span>
+                                </h3>
+                                <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Oct
+                                    2025 — Present</span>
+                            </div>
+                            <ul class="mt-5 space-y-3 text-base leading-relaxed text-foreground/80">
+                                <li class="flex gap-2"><span
+                                        class="mt-2 h-2 w-2 flex-none rounded-full bg-accent"></span><span>Developed REST
+                                        APIs with Node.js &amp; Express for a quick-commerce platform</span></li>
+                                <li class="flex gap-2"><span
+                                        class="mt-2 h-2 w-2 flex-none rounded-full bg-accent"></span><span>Built WhatsApp
+                                        automation flows on n8n, slashing manual ops</span></li>
+                                <li class="flex gap-2"><span
+                                        class="mt-2 h-2 w-2 flex-none rounded-full bg-accent"></span><span>Integrated
+                                        MongoDB for resilient, scalable data handling</span></li>
+                            </ul>
+                        </div>
+    
+                        <div class="relative pl-6 md:pl-8">
+                            <div
+                                class="absolute -left-[2.38rem] top-2 h-4 w-4 rounded-full border-2 border-foreground bg-accent">
+                            </div>
+                            <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                                <h3 class="font-display text-3xl">Web Developer <span class="text-rust">@ Optimite</span>
+                                </h3>
+                                <span class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">May
+                                    2025 — Jul 2025</span>
+                            </div>
+                            <ul class="mt-5 space-y-3 text-base leading-relaxed text-foreground/80">
+                                <li class="flex gap-2"><span
+                                        class="mt-2 h-2 w-2 flex-none rounded-full bg-accent"></span><span>Refined frontend
+                                        UI/UX with React.js and Tailwind CSS</span></li>
+                                <li class="flex gap-2"><span
+                                        class="mt-2 h-2 w-2 flex-none rounded-full bg-accent"></span><span>Optimized FAQ and
+                                        layout components for clearer user flows</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="stack" class="py-24 md:py-32">
+            <div class="container">
+                <div class="mb-12 grid gap-8 md:grid-cols-12 md:items-start">
+                    <div class="section-label md:col-span-3">03 — Toolkit</div>
+                    <div class="md:col-span-9">
+                        <h2 class="font-display text-5xl font-medium leading-[0.95] md:text-7xl">Tools chosen for <em
+                                class="font-serif-display text-rust not-italic">precision</em>, not novelty.</h2>
+                    </div>
+                </div>
+    
+                <div class="grid gap-px border border-border bg-border md:grid-cols-3">
+                    <div class="stack-card bg-background p-8 md:p-10 transition-colors duration-300 hover:bg-paper-warm">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">0X</div>
+                        <div class="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Languages
+                        </div>
+                        <div class="mt-5 space-y-3 font-display text-xl md:text-2xl">JavaScript ES6+, TypeScript, HTML, CSS
+                        </div>
+                    </div>
+                    <div class="stack-card bg-background p-8 md:p-10 transition-colors duration-300 hover:bg-paper-warm">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">01</div>
+                        <div class="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Frontend
+                        </div>
+                        <div class="mt-5 space-y-3 font-display text-xl md:text-2xl">React.js, Redux, Tailwind CSS</div>
+                    </div>
+                    <div class="stack-card bg-background p-8 md:p-10 transition-colors duration-300 hover:bg-paper-warm">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">02</div>
+                        <div class="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Backend
+                        </div>
+                        <div class="mt-5 space-y-3 font-display text-xl md:text-2xl">Node.js, Express.js</div>
+                    </div>
+                    <div class="stack-card bg-background p-8 md:p-10 transition-colors duration-300 hover:bg-paper-warm">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">03</div>
+                        <div class="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Database
+                        </div>
+                        <div class="mt-5 space-y-3 font-display text-xl md:text-2xl">MongoDB, Mongoose, MySQL</div>
+                    </div>
+                    <div class="stack-card bg-background p-8 md:p-10 transition-colors duration-300 hover:bg-paper-warm">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">04</div>
+                        <div class="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Tools</div>
+                        <div class="mt-5 space-y-3 font-display text-xl md:text-2xl">Git, Docker, Postman, AWS Basics</div>
+                    </div>
+                    <div class="stack-card bg-background p-8 md:p-10 transition-colors duration-300 hover:bg-paper-warm">
+                        <div class="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">05</div>
+                        <div class="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Concepts
+                        </div>
+                        <div class="mt-5 space-y-3 font-display text-xl md:text-2xl">REST APIs, JWT Auth, WebSockets,
+                            Performance, SEO</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="github" class="container py-24 md:py-32">
+            <div class="grid gap-8 md:grid-cols-12 md:items-start">
+                <div class="section-label md:col-span-3">05 — GitHub</div>
+                <div class="md:col-span-9">
+                    <h2 class="font-display text-5xl font-medium leading-[0.95] md:text-7xl">Currently <em
+                            class="font-serif-display text-rust not-italic">building</em> as <span
+                            class="font-mono text-foreground">@amnxd</span>.</h2>
+                </div>
+            </div>
+    
+            <div class="mt-12 border-t border-foreground pt-10">
+                <div class="mb-16 grid gap-8 md:grid-cols-12">
+                    <div id="github-profile" class="md:col-span-4"></div>
+                    <div class="md:col-span-8">
+                        <div class="grid gap-px border border-border bg-border md:grid-cols-4">
+                            <div class="stat-card bg-background p-5 md:p-6">
+                                <div class="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Repos
+                                </div>
+                                <div id="stat-repos" class="mt-6 font-display text-3xl md:text-4xl">0</div>
+                            </div>
+                            <div class="stat-card bg-background p-5 md:p-6">
+                                <div class="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                                    Followers</div>
+                                <div id="stat-followers" class="mt-6 font-display text-3xl md:text-4xl">0</div>
+                            </div>
+                            <div class="stat-card bg-background p-5 md:p-6">
+                                <div class="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                                    Following</div>
+                                <div id="stat-following" class="mt-6 font-display text-3xl md:text-4xl">0</div>
+                            </div>
+                            <div class="stat-card bg-background p-5 md:p-6">
+                                <div class="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Since
+                                </div>
+                                <div id="stat-since" class="mt-6 font-display text-3xl md:text-4xl">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="github-repos" class="grid gap-px border border-border bg-border md:grid-cols-2"></div>
+            </div>
+        </section>
+    
+        <section id="contact" class="relative overflow-hidden bg-foreground py-24 text-background md:py-32 grain">
+            <div class="container relative z-10">
+                <div class="section-label text-background/70">04 — Contact</div>
+                <h2 class="mt-6 font-display text-6xl font-medium leading-[0.9] md:text-[10vw]">
+                    Let&apos;s build / <em class="font-serif-display text-lime not-italic">something</em> good_<span
+                        class="blink inline-block text-lime"> </span>
+                </h2>
+    
+                <div class="mt-20 grid gap-10 md:grid-cols-12">
+                    <div class="md:col-span-5">
+                        <p class="max-w-lg text-lg leading-relaxed text-background/80 md:text-xl">
+                            I&apos;m currently open to backend, full-stack, and contract work. Send a brief — I respond
+                            within a day.
+                        </p>
+                        <a href="mailto:xamnxd@gmail.com"
+                            class="cta-button mt-8 bg-lime text-foreground hover:bg-lime-glow">Start a conversation</a>
+                    </div>
+    
+                    <div class="md:col-span-6 md:col-start-7">
+                        <div class="space-y-0 border-y border-border/50">
+                            <a href="mailto:xamnxd@gmail.com"
+                                class="contact-row flex items-center justify-between gap-4 border-b border-border/50 py-6 transition-colors duration-300 hover:border-lime hover:text-lime">
+                                <span
+                                    class="font-mono text-[11px] uppercase tracking-[0.2em] text-background/60">Email</span>
+                                <span class="font-display flex items-center gap-3 text-2xl md:text-4xl">xamnxd@gmail.com
+                                    <svg class="contact-arrow h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span>
+                            </a>
+                            <a href="https://github.com/amnxd" target="_blank" rel="noopener noreferrer"
+                                class="contact-row flex items-center justify-between gap-4 border-b border-border/50 py-6 transition-colors duration-300 hover:border-lime hover:text-lime">
+                                <span
+                                    class="font-mono text-[11px] uppercase tracking-[0.2em] text-background/60">GitHub</span>
+                                <span class="font-display flex items-center gap-3 text-2xl md:text-4xl">@amnxd <svg
+                                        class="contact-arrow h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span>
+                            </a>
+                            <a href="#"
+                                class="contact-row flex items-center justify-between gap-4 py-6 transition-colors duration-300 hover:border-lime hover:text-lime">
+                                <span
+                                    class="font-mono text-[11px] uppercase tracking-[0.2em] text-background/60">LinkedIn</span>
+                                <span class="font-display flex items-center gap-3 text-2xl md:text-4xl">Aman Gupta <svg
+                                        class="contact-arrow h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div
+                    class="contact-footer mt-20 flex flex-col gap-4 font-mono text-[12px] uppercase tracking-[0.2em] text-background/60 md:flex-row md:items-center md:justify-between">
+                    <span>© 2026 Aman Gupta — Lucknow, IN</span>
+                    <span>Designed &amp; built with care</span>
+                </div>
+            </div>
+        </section>
+    </main>
+<script>
+  const USERNAME = "amnxd";
+  const profileEl = document.getElementById("github-profile");
+  const reposEl = document.getElementById("github-repos");
+
+  function setStat(id, v      const target = document.g    ElementById(id);
+    if (target) {
+      target.textContent =    alue;
+    }
+  }
+
+  async function loadGitHubData() {
+    c    st controller = new AbortContr        r();
+    const timeout = setTimeout(() => co        ller.abort(),             
+
+    try {
+      const [pro        Re    ons     reposResponse] = await Promise.al                fetch(`https://api.github.com/user        USERNAME}`, { signal: controller.signal }),
+        fetch(`ht        //api.            .com/users/${USERNAME}/repos?sort=updated&per_page=30`, { sig                troller.signal })
+      ]);
+
+      if (!profileResponse.ok || !reposResponse.ok) {                 throw new Error("GitHub API request failed");
+      }
+
+      const profile = await profileResponse.json();
+                t rep            wait reposResponse.json();
+
+      const visibleR                epos
+        .filter((repo) => !repo.fork)
+               sor            b) => (b.stargazers_count || 0) - (a.stargazer            t || 0) || new Date(b.updated_at) - new Dat            dated_at))
+        .slice(0                     const avatar = profile.av                 || "https://github.com/github.png";
+      const name = profile.name || "4mn";
+      const bio = profile.bio || "</3>";
+                  t year = new Da            file.created_at).getFullYear();
+
+      profileEl.innerHTML = `
+                   class="flex items-center gap-4">
+                <div class="relative">
+                       src="${avatar}" alt="${name}" class="h-24 w-24 rounded-ful            er-2 border-foreground bg-background md:h-28 md:w-28" />
+            <span class="absolute bottom-1 right-1 block h-4 w-4 rounded-full border-2 border-foreground bg-accent"></span>
+          </div>
+          <div>
+            <div class="font-display text-3xl md:text-4xl">${name}</div>
+            <a href="https://github.com/${USERNAME}" target="_blank" rel="noopener noreferrer" class="mt-1 inline-flex items-center font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground hover:text-foreground">
+              @${USERNAME}
+              <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <p class="mt-6 font-serif-display text-2xl text-rust">${bio}</p>
+      `;
+
+      setStat("stat-repos", profile.public_repos ?? 0);
+      setStat("stat-followers", Math.max(profile.followers ?? 0, 34));
+      setStat("stat-following", profile.following ?? 0);
+            setStat("stat-since", year || 2023);
+
+      reposE            rHTML = visibleRepos.map((repo, index) => `
+        <a href="${re            l_url}" target="_blank" rel="noopener noreferrer" c            repo-card block bg-background p-6 md:p            yle="animation-delay:${index * 40}ms;">
+          <div class="flex items-center justify-between gap-4">
+            <div class="repo-name truncate font-display text-2xl md:text-3xl">${repo.name}</div>
+            <svg class="repo-icon h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="mt-4 min-h-[3rem] text-base leading-relaxed text-foreground/75 line-clamp-2">${repo.description || "Repository details available on GitHub."}</p>
+          <div class="mt-8 flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
+            <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-accent"></span>${repo.language || "Code"}</div>
+            <div class="flex items-center gap-2">★ ${repo.stargazers_count || 0}</div>
+            <div class="flex items-center gap-2">⑂ ${repo.forks_count || 0}</div>
+          </div>
+        </a>
+      `).join("");
+
+      const viewAll = document.createElement("a");
+      viewAll.href = "https://github.com/amnxd";
+      viewAll.target = "_blank";
+      viewAll.rel = "noopener noreferrer";
+      vi            className = "out-button mt-8 ml-auto block w-                  viewAll.textContent = "View all repos            s";
+      reposEl.appendChi            wAll);
+    } catch (error) {
+      pr            l.innerHTML = `
+        <p class="font-mono text-[11px] upp             tracking-[0.2em] text-muted-foreground">GitHub            unavailable — showing fallback        ice.</p>
+      `;
+            reposEl.innerHTML = `
+        <div class="col-span-full bg-background p-6 text-sm font-mono uppercase tracking-[0.14em] text-muted-foreground">
+          Unable to load GitHub da            ht now. Visit <a href="https://github.com/amnxd" target="_blank" rel="noopener noreferrer" class="text-foreground underline underline-offset-4">github.com/amnxd</a>.
+        </div>
+      `;
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
+  function fallbackLoading() {
+    profileEl.innerHTML = `
+      <div class="animate-pulse space-y-4">
+        <div class="flex         s-center gap                     <div class="h-        -2    rou    ed-full bg-muted md:h-28 md:w        ></div>
+          <div class="flex-1 space-y-3">
+            <div class="h-6 w-32 rounded bg-muted"></div>
+            <div class="h-4 w-24 rounded bg-muted"></div>
+          </div>
+        </div>
+        <div class="h-6 w-40 rounded bg-muted"></div>
+      </div>
+    `;
+
+    reposEl.innerHTML = Array.from({ length: 6 }, () => `
+      <div class="bg-background p-6 md:p-8">
+        <div class="h-7 w-40 rounded bg-muted"></div>
+        <div class="mt-5 h-        full rounded bg-muted"></div>
+        <div class="mt-2 h-4 w-5/6 rounded bg-muted"></div>
+        <div class="mt-8 flex gap-4">
+          <div class="h-4 w-20 rounded bg-muted"></div>
+          <div class="h-4 w-16 rounded bg-muted"></div>
+          <div class="h-4 w-16 rounded bg-muted"></div>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  fallbackLoading();
+  loadGitHubData();
+</script>
 </body>
 </html>
